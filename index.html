@@ -7,31 +7,36 @@
 
     <!-- Votre CSS personnalisé -->
     <style>
+        .carousel {
+            overflow: hidden;
+        }
 
         .carousel div {
-            background-color: #f2f2f2;
-            margin: 5px;
             text-align: center;
+            margin: 0 10px; /* Espacement entre les diapositives */
+            padding: 10px; /* Espace intérieur des diapositives */
+            border-radius: 15px;
+            margin-left: -10px;
         }
 
-        img
-        {
-            width: 100%;
-            border-radius: 5px;
-        }
 
+        img {
+            max-width: 100%; /* Ajuster la largeur de l'image au conteneur */
+            height: auto;
+            border-radius: 15px;
+        }
     </style>
 </head>
 <body>
     <!-- Vos éléments HTML pour le carrousel -->
     <div class="carousel">
-        <div><img src="img/wedding_01.png" alt=""></div>
-        <div><img src="img/wedding_02.png" alt=""></div>
-        <div><img src="img/wedding_03.png" alt=""></div>
-        <div><img src="img/wedding_04.png" alt=""></div>
-        <div><img src="img/wedding_05.png" alt=""></div>
-        <div><img src="img/wedding_06.png" alt=""></div>
-        <div><img src="img/wedding_07.png" alt=""></div>
+        <div><img src="img/wedding_01.png" alt="">Gateau1</div>
+        <div><img src="img/wedding_02.png" alt="">Gateau2</div>
+        <div><img src="img/wedding_03.png" alt="">Gateau3</div>
+        <div><img src="img/wedding_04.png" alt="">Gateau4</div>
+        <div><img src="img/wedding_05.png" alt="">Gateau5</div>
+        <div><img src="img/wedding_06.png" alt="">Gateau6</div>
+        <div><img src="img/wedding_07.png" alt="">Gateau7</div>
         <!-- Ajoutez plus de cartes au besoin -->
     </div>
 
@@ -45,6 +50,7 @@
                 slidesToShow: 2, // Nombre de cartes visibles à la fois
                 slidesToScroll: 1, // Nombre de cartes à faire défiler
                 mobileFirst: true, // Activer le mode mobile d'abord
+                infinite: false, // Désactiver le défilement infini
                 responsive: [
                     {
                         breakpoint: 768, // À partir de quelle largeur d'écran les paramètres changent
