@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Incluez les fichiers CSS de Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Votre CSS personnalisé -->
+    <style>
+
+        .carousel div {
+            background-color: #f2f2f2;
+            margin: 5px;
+            text-align: center;
+        }
+
+        img
+        {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Vos éléments HTML pour le carrousel -->
+    <div class="carousel">
+        <div><img src="img/wedding_01.png" alt=""></div>
+        <div><img src="img/wedding_02.png" alt=""></div>
+        <div><img src="img/wedding_03.png" alt=""></div>
+        <div><img src="img/wedding_04.png" alt=""></div>
+        <div><img src="img/wedding_05.png" alt=""></div>
+        <div><img src="img/wedding_06.png" alt=""></div>
+        <div><img src="img/wedding_07.png" alt=""></div>
+        <!-- Ajoutez plus de cartes au besoin -->
+    </div>
+
+    <!-- Incluez le fichier JavaScript de Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        // Initialisez Slick Carousel lorsque le document est prêt
+        document.addEventListener("DOMContentLoaded", function () {
+            $(".carousel").slick({
+                slidesToShow: 2, // Nombre de cartes visibles à la fois
+                slidesToScroll: 1, // Nombre de cartes à faire défiler
+                mobileFirst: true, // Activer le mode mobile d'abord
+                responsive: [
+                    {
+                        breakpoint: 768, // À partir de quelle largeur d'écran les paramètres changent
+                        settings: {
+                            slidesToShow: 3, // Nombre de cartes visibles sur des écrans plus larges
+                            slidesToScroll: 1,
+                        }
+                    },
+                    // Ajoutez d'autres points de rupture et paramètres au besoin
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
